@@ -11,6 +11,11 @@ class Jogadores:
         # exemplo para fazer a interpolacao de uma string
         print(f"Jogador: {nome_jogador} adicionado")
 
+    # aqui adiciona varios jogadores
+    def adicionar_jogadores(self, jogadores: list):
+        for jogador in jogadores:
+            self.adicionar_jogador(jogador)
+
     def listar_jogadores(self):
         print(self.lista_jogadores)
 
@@ -23,10 +28,13 @@ class Jogadores:
     def remover_ultimo_jogador(self):
         removido = self.lista_jogadores.pop()
         print("Jogador Removido: ", removido)
-    
+
     # aqui um exemplo de fila, FIFO, sempre remove o primeiro elemennto
     def remover_primeiro_jogador(self):
         removido = self.lista_jogadores.pop(0)
         print("Jogador Removido: ", removido)
 
-        
+    # mostra quantos jogadores tem na lista
+    def conta_jogadores(self):
+        texto = f"Tem {len(self.lista_jogadores)} jogadores"
+        print(texto)
